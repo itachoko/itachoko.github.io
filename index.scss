@@ -1,0 +1,353 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html,
+body,
+div,
+span,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+abbr,
+address,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+samp,
+small,
+strong,
+sub,
+sup,
+var,
+b,
+i,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+body {
+  line-height: 1;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+nav ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+a {
+  margin: 0;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+  background-color: #ff9;
+  color: #000;
+  text-decoration: none;
+}
+
+/* change colours to suit your needs */
+mark {
+  background-color: #ff9;
+  color: #000;
+  font-style: italic;
+  font-weight: bold;
+}
+
+del {
+  text-decoration: line-through;
+}
+
+abbr[title],
+dfn[title] {
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* change border colour to suit your needs */
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #cccccc;
+  margin: 1em 0;
+  padding: 0;
+}
+
+input,
+select {
+  vertical-align: middle;
+}
+
+//media Query
+$pc: 768px; // PC
+$tab: 576px; // tb
+$sp: 380px; //sp
+
+
+@mixin hover {
+  &:hover {
+    position: relative;
+    cursor: pointer;
+    top: 0.1em;
+  }
+}
+
+.main{
+    width:100%;
+    height:100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; 
+    .name{
+        border-top:2px solid #000000;
+        border-bottom:2px solid #000000;
+        font-size:2rem;
+        padding:10px 0;
+    }
+    .detail-data{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        font-size:1.5rem;
+        padding:10px 0;
+        p{
+            @include hover;
+        }
+    }
+    .wrapper{
+        border-top:2px solid #000000;
+        font-size:1.5rem;
+        padding:10px 0;
+        .fab{
+            color:black;
+            @include hover;
+        }
+    }
+    .popup{
+        position:fixed;
+        top: 20px;
+        bottom: 20px;
+        overflow: auto;
+        background-color: rgba(0,0,0,0.8);
+        z-index:10;
+        width:80%;
+        color:white;
+        text-align:left;
+        padding:20px;
+        border-radius: 10px;
+        .cancel-btn{
+          p{
+              text-align:right;
+              .fas{
+                  @include hover;
+              }
+          }
+      }
+    }
+    .aboutme-popup{
+        .content{
+            padding:20px 0 0 0;
+        }
+        h1{
+            padding:20px 0px 10px 0px;
+            font-size:1.5em;
+            border-top:2px solid white;
+        }
+        h2{
+            padding:20px 10px 0;
+        }
+        ul{
+            padding-left:40px;
+        }
+        a{
+            color:rgba(176, 237, 255, 0.8);
+        }
+        p{
+            padding-left:20px;
+        }
+        .picture{
+            text-align: center;
+            img{
+                border-radius: 10px;
+            }
+        }
+        .employment{
+            p{
+                padding:5px 10px 0;
+            }
+        }
+        display:none;
+    }
+    .viewgallery-popup{
+      .content{
+        display:flex;
+        align-items: center;
+        justify-content: center;
+      }
+        .slide{
+          padding:20px 0px;
+          width:70%;
+          text-align: center;
+              img{
+                  border-radius: 10px;
+              }
+        }
+        .slide-text{
+          width:30%;
+          h2{
+            font-size:2em;
+          }
+          p{
+            padding:30px 0 0 0;
+          }
+        }
+      display:none;
+    }
+}
+
+/* Cool infinite background scrolling animation.
+ */
+@import url(https://fonts.googleapis.com/css?family=Exo:100);
+
+$bg-url: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADIAAAAyCAIAAACRXR/mAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAIGNIUk0AAHolAACAgwAA+f8AAIDpAAB1MAAA6mAAADqYAAAXb5JfxUYAAABnSURBVHja7M5RDYAwDEXRDgmvEocnlrQS2SwUFST9uEfBGWs9c97nbGtDcquqiKhOImLs/UpuzVzWEi1atGjRokWLFi1atGjRokWLFi1atGjRokWLFi1af7Ukz8xWp8z8AAAA//8DAJ4LoEAAlL1nAAAAAElFTkSuQmCC";
+$bg-width: 50px;
+$bg-height: 50px;
+
+/* Animations */
+@-webkit-keyframes bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@-moz-keyframes    bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@-o-keyframes      bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+@keyframes         bg-scrolling-reverse {
+  100% { background-position: $bg-width $bg-height; }
+}
+
+@-webkit-keyframes bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@-moz-keyframes    bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@-o-keyframes      bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+@keyframes         bg-scrolling {
+  0% { background-position: $bg-width $bg-height; }
+}
+
+/* Main styles */
+body {
+  font: 400 16px/1.5 exo, ubuntu, "segoe ui", helvetica, arial, sans-serif;
+  text-align: center;
+  background: url($bg-url) repeat 0 0;
+  
+  -webkit-animation: bg-scrolling-reverse .92s infinite;
+  -moz-animation:    bg-scrolling-reverse .92s infinite;
+  -o-animation:      bg-scrolling-reverse .92s infinite;
+  animation:         bg-scrolling-reverse .92s infinite;
+  -webkit-animation-timing-function: linear;
+  -moz-animation-timing-function:    linear;
+  -o-animation-timing-function:      linear;
+  animation-timing-function:         linear;
+}
