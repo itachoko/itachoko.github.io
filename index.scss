@@ -177,6 +177,11 @@ $pc: 768px; // PC
 $tab: 576px; // tb
 $sp: 380px; //sp
 
+@mixin pc_max {
+  @media (max-width: ($pc)) {
+    @content;
+  }
+}
 
 @mixin hover {
   &:hover {
@@ -274,6 +279,22 @@ $sp: 380px; //sp
         }
         display:none;
     }
+    @include pc_max{
+      .aboutme-popup{
+        h1{
+          font-size:1em;
+        }
+        h2{
+          font-size:0.8em;
+        }
+        p{
+          font-size:0.5em;
+        }
+        ul{
+          font-size:0.5em;
+        }
+      }
+    }
     .viewgallery-popup{
       .content{
         display:flex;
@@ -298,6 +319,30 @@ $sp: 380px; //sp
           }
         }
       display:none;
+    }
+    @include pc_max{
+      .viewgallery-popup{
+        .content{
+          flex-direction: column;
+          border-bottom: 2px solid white;
+          padding-bottom:40px;
+          h1{
+            font-size:0.3em;
+          }
+          p{
+            font-size:0.5em;
+          }
+          h2{
+            font-size:1em;
+          }
+          p{
+            padding:0 !important;
+          }
+          .slide-text{
+            width:70%;
+          }
+        }
+      }
     }
 }
 
