@@ -258,7 +258,7 @@ $sp: 380px; //sp
             padding:20px 10px 0;
         }
         ul{
-            padding-left:40px;
+            padding-left:20px;
         }
         a{
             color:rgba(176, 237, 255, 0.8);
@@ -275,6 +275,10 @@ $sp: 380px; //sp
         .employment{
             p{
                 padding:5px 10px 0;
+            } 
+            ul{
+              border-left:0.5px solid white;
+              margin-left:20px;
             }
         }
         display:none;
@@ -288,10 +292,15 @@ $sp: 380px; //sp
           font-size:0.8em;
         }
         p{
-          font-size:0.5em;
+          font-size:0.7em;
         }
         ul{
-          font-size:0.5em;
+          font-size:0.7em;
+        }
+        .employment{
+          p{
+            font-size:0.8em;
+          } 
         }
       }
     }
@@ -330,7 +339,7 @@ $sp: 380px; //sp
             font-size:0.3em;
           }
           p{
-            font-size:0.5em;
+            font-size:0.8em;
           }
           h2{
             font-size:1em;

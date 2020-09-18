@@ -280,7 +280,7 @@ select {
 }
 
 .main .aboutme-popup ul {
-  padding-left: 40px;
+  padding-left: 20px;
 }
 
 .main .aboutme-popup a {
@@ -303,6 +303,11 @@ select {
   padding: 5px 10px 0;
 }
 
+.main .aboutme-popup .employment ul {
+  border-left: 0.5px solid white;
+  margin-left: 20px;
+}
+
 @media (max-width: 768px) {
   .main .aboutme-popup h1 {
     font-size: 1em;
@@ -311,10 +316,13 @@ select {
     font-size: 0.8em;
   }
   .main .aboutme-popup p {
-    font-size: 0.5em;
+    font-size: 0.7em;
   }
   .main .aboutme-popup ul {
-    font-size: 0.5em;
+    font-size: 0.7em;
+  }
+  .main .aboutme-popup .employment p {
+    font-size: 0.8em;
   }
 }
 
@@ -369,7 +377,7 @@ select {
     font-size: 0.3em;
   }
   .main .viewgallery-popup .content p {
-    font-size: 0.5em;
+    font-size: 0.8em;
   }
   .main .viewgallery-popup .content h2 {
     font-size: 1em;
